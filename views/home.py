@@ -8,10 +8,17 @@ router = fastapi.APIRouter()
 @template()
 def index(user: str = 'anon'):
     return {
-        'user_name': user
+        'package_count': 274_000,
+        'release_count': 5_198_174,
+        'user_count': 73_874,
+        'packages': [
+            {'id': 'fastapi', 'summary': "A great web framework"},
+            {'id': 'uvicorn', 'summary': "Your favorite ASGI server"},
+            {'id': 'httpx', 'summary': "Requests for an async world"},
+        ]
     }
 
-
-@router.get('/about')
-def about():
-    return {}
+    @router.get('/about')
+    @template()
+    def about():
+        return {}
