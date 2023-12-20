@@ -1,2 +1,2 @@
 def user_count() -> int:
-    return 73_874
+    return 767_059

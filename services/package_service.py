@@ -6,11 +6,11 @@ from data.release import Release
 
 
 def release_count() -> int:
-    return 2_234_847
+    return 5_198_929
 
 
 def package_count() -> int:
-    return 274_000
+    return 502_056
 
 
 def latest_packages(limit: int = 5) -> List:
