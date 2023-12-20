@@ -15,9 +15,10 @@ def package_count() -> int:
 
 def latest_packages(limit: int = 5) -> List:
     return [
-               {'id': 'fastapi', 'summary': "A great web framework"},
-               {'id': 'uvicorn', 'summary': "Your favorite ASGI server"},
-               {'id': 'httpx', 'summary': "Requests for an async world"},
+               {'id': 'fastapi', 'summary': "A great web framework."},
+               {'id': 'uvicorn', 'summary': "Your favorite ASGI server."},
+               {'id': 'python','summary':"A simple programming language."},
+               {'id': 'httpx', 'summary': "Requests for an async world."},
            ][:limit]
 
 
