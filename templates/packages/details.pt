@@ -8,12 +8,13 @@
                     <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <h1>
-                        ${ package.id } ${ latest_version }
+                            ${ package.id } ${ latest_version }
                         </h1>
 
                         <div class="install sub-hero">
                             pip install
-                                ${ package.id }<span tal:condition="not is_latest">==${ release_version }</span>
+                            ${ package.id }
+                            <span tal:condition="not is_latest">==${ release_version }</span>
                         </div>
                     </div>
 
@@ -29,7 +30,7 @@
                         <div class="latest-release-date">
                             Last release:
                             <span tal:condition="latest_release">
-                                    ${ latest_release.created_date.date().isoformat() }
+                                ${ latest_release.created_date.date().isoformat() }
                             </span>
                         </div>
                     </div>
@@ -40,7 +41,7 @@
             <div class="row pypi-stats">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
-                        ${ package.summary }
+                    ${ package.summary }
                 </div>
             </div>
 
@@ -53,11 +54,13 @@
                         <a href="/project/${ package.id }">
                             <i class="fa fa-align-left" aria-hidden="true"></i>
                             Project description
-                        </a><br>
+                        </a>
+                        <br>
                         <a href="#">
                             <i class="fa fa-history" aria-hidden="true"></i>
                             Release history
-                        </a><br>
+                        </a>
+                        <br>
                         <a href="#">
                             <i class="fa fa-download" aria-hidden="true"></i>
                             Download files
@@ -80,7 +83,8 @@
                             or by using
                             <a class="link-inline"
                                href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/">Google
-                                BigQuery</a>
+                                BigQuery
+                            </a>
                         </p>
                         <hr>
 
@@ -104,7 +108,7 @@
                         <hr>
                         <h3>License</h3>
                         <div class="license">
-                                ${ package.license }
+                            ${ package.license }
                         </div>
 
                     </div>
@@ -124,7 +128,7 @@
         </div>
     </div>
 
-    <div metal:fill-slot="additional-css"  tal:omit-tag="True">
+    <div metal:fill-slot="additional-css" tal:omit-tag="True">
         <link rel="stylesheet" href="/static/css/package.css">
     </div>
 </div>

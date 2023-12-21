@@ -19,6 +19,7 @@ def latest_packages(limit: int = 5) -> List:
                {'id': 'uvicorn', 'summary': "Your favorite ASGI server."},
                {'id': 'python','summary':"A simple programming language."},
                {'id': 'httpx', 'summary': "Requests for an async world."},
+               {'id': 'stam package','summary':"stam package for example"},
            ][:limit]
 
 
