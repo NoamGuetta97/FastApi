@@ -1,5 +1,10 @@
-from services import package_service
+import datetime
+from typing import List, Optional
+
 from starlette.requests import Request
+
+from data.release import Release
+from services import package_service, user_service
 from viewmodels.shared.viewmodel import ViewModelBase
 
 
@@ -19,3 +24,4 @@ class DetailsViewModel(ViewModelBase):
 
         self.latest_version = self.latest_release.version
         self.maintainers = self.package.maintainers
+
